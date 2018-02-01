@@ -27,7 +27,7 @@ games<-read_html(monthpage[i])
 
 urltobind<-games %>% html_nodes(".center a") %>% html_attr(name="href") %>% 
   strsplit("/2") %>% unlist %>%.[!odd(1:length(.))] %>% 
-    data.frame("https://www.basketball-reference.com/boxscores/pbp/",.) 
+    data.frame("https://www.basketball-reference.com/boxscores/pbp/2",.) 
 
 colnames(urltobind)<-c('beginning','end')
 
